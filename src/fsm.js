@@ -4,8 +4,8 @@ class FSM {
    * @param config
    */
   constructor(config) {
-    this.states = config.states;
-    this.state = config.initial;
+    this.states = config.states || {};
+    this.state = config.initial || null;
     this._undo = [];
     this._redo = [];
   }
